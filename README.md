@@ -7,4 +7,8 @@ Steps:
 3. Run main.cpp.
 4. Use the generated file in your QML application.
 
+Tested with:
+1. Qt 5.15.2
+2. Material Design Icons 6.5.95
+
 
