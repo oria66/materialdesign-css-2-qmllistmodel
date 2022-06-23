@@ -9,7 +9,7 @@ QString hex2textstring(int hexCode){
     int h = floor((hexCode - 0x10000) / 0x400) + 0xD800;
     int l = (hexCode - 0x10000) % 0x400 + 0xDC00;
 
-    return QString("\\u%1\\u%2").arg(QString::number(h, 16)).arg(QString::number(l, 16));
+    return QString("\\u%1\\u%2").arg(QString::number(h, 16), QString::number(l, 16));
 }
 
 bool processLineLooking4Key(const QString &line, QString &key){
