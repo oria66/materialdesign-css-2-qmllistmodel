@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
         if(isLookingForValue){
             processLineLooking4Value(line, temporalValue);
 
+
+
             codename.insert(temporalKey.replace("-","_"), temporalValue);
 
             isLookingForValue = false;
@@ -100,7 +102,7 @@ int main(int argc, char *argv[])
             finalSeparator = "}";
         }
 
-        out << "\"" << i.key() << "\": "  << i.value() << finalSeparator << "\n";
+        out << QString("\"%1\": String.fromCodePoint(%2)%3\n").arg(i.key(), i.value(), finalSeparator);
     }
 
     outputFile.close();
